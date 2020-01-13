@@ -12,9 +12,8 @@ function unique(arr) {
     if (!accum.endsWith(elem)) {
       accum = accum + elem;
     }
-
     return accum;
-  });
+  }, "");
 }
 
 function repeat(arr) {
