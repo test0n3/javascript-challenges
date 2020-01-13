@@ -9,13 +9,14 @@ function averagePair(arr, num) {
   let start = 0;
   let end = arr.length - 1;
   let results = [];
-
+  /*
   console.log(
     `Initial values, 
     start: ${start}, arr[${start}]: ${arr[start]}
     end: ${end}, arr[${end}]: ${arr[end]}
     results: ${results}`
   );
+  */
 
   while (start < end) {
     let average = (arr[start] + arr[end]) / 2;
@@ -27,12 +28,14 @@ function averagePair(arr, num) {
     } else {
       start++;
     }
+    /*
     console.log(
       `Changed values, 
       start: ${start}, arr[${start}]: ${arr[start]}
       end: ${end}, arr[${end}]: ${arr[end]}
       results: ${results}`
     );
+    */
   }
   if (results.length === 0) {
     return `None of these number pairs have an average of ${num}`;
@@ -41,4 +44,12 @@ function averagePair(arr, num) {
   }
 }
 
-console.log(averagePair([-2, 0, 1, 2, 4, 5, 6, 7], 5.5));
+const arr = [-2, 0, 1, 2, 4, 5, 6, 7];
+const value = 5.5;
+
+console.log(
+  `Find the couple of numbers in ${arr} which average is ${value}: ${averagePair(
+    arr,
+    value
+  )}`
+);
